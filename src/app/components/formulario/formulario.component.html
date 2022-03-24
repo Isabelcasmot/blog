@@ -1,0 +1,35 @@
+<div class="container">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+        <div>
+            <label for="">Title:</label>
+            <input type="text" class="form-control" formControlName="title">
+        </div>
+
+        <div>
+            <label for="">Body:</label>
+            <input type="text" class="form-control" formControlName="body">
+        </div>
+
+        <div>
+            <label for="">Author:</label>
+            <input type="text" class="form-control" formControlName="author">
+        </div>
+
+        <div>
+            <label for="">Category: <span> (Sugerencias: Drama, terror, comedia y romance)</span> </label>
+            <input type="text" class="form-control" formControlName="category">
+        </div>
+
+        <div>
+            <label for="">Create at:</label>
+            <input type="date" class="form-control" formControlName="createAt">
+        </div>
+
+        <input type="submit" value="Enviar" class="btn btn-info">
+
+    </form>
+
+
+
+</div>

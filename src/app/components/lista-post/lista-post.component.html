@@ -1,0 +1,31 @@
+<header>
+    <h1> POSTS </h1>
+</header>
+
+<div class="container">
+    <div class="selector">
+        <select (change)="onChange($event)" class="form-select" aria-label="Disabled select example">
+            <option selected> Categorias</option>
+            <option value="drama">Drama</option>
+            <option value="terror">Terror</option>
+            <option value="comedia">Comedia</option>
+            <option value="romance">Romance</option>
+        </select>
+    </div>
+
+
+
+    <div class="posts">
+        <div class="post" *ngFor="let post of arrPost">
+            <h3>{{post.title}}</h3>
+            <hr>
+            <div class="contParrafos">
+                <p> {{post.body}}</p>
+                <p> <span>Author:</span> {{post.author}}</p>
+                <p><span>Category:</span> {{post.category}}</p>
+                <p><span>Date: </span>{{post.createAt}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
